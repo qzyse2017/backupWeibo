@@ -1,0 +1,3 @@
+[submodule "weibo-backup-crx"]
+	path = weibo-backup-crx
+	url = https://github.com/tiye/weibo-backup-crx
