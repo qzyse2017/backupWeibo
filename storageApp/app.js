@@ -1,12 +1,6 @@
 let chooseFileButton = document.getElementById('save_file');
 let collection = [];
   
-let stateText = document.getElementById('save_state');
-
-function displayText(newText) {
-    stateText.innerHTML = newText;
-}
-
 function writeToFile(theFileEntry) {
   	theFileEntry.createWriter(function(fileWriter) {
     	fileWriter.onerror = function(e) {
@@ -28,13 +22,13 @@ function writeToFile(theFileEntry) {
 
 function saveAsFile() {
     var accepts = [{
-        mimeTypes: ['text'],
-        extensions: ['plain']
+        mimeTypes: ['application'],
+        extensions: ['json']
     }]; 
 
     chrome.fileSystem.chooseEntry({type: 'saveFile' ,accepts: accepts}, function(writableEntry) {
         if (!writableEntry) {
-            displayText('No file selected.');
+            return;
         }
 
         chrome.storage.local.set(
