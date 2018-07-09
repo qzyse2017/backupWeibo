@@ -1,0 +1,13 @@
+{
+	"name": "backup for Weibo Posts",
+	"version" : "0.0.0",
+	"description": "backup your weibo posts and save them in markdown format",
+	"icons": {
+
+	},
+	"background": {
+		"persistent": false,
+		"scripts": [""]
+	},
+	"permissions": []
+}
