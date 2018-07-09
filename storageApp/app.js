@@ -13,7 +13,8 @@ function writeToFile(theFileEntry) {
       		console.log("Write failed: " + e.toString());
         };
                  
-        let blob = new Blob([JSON.stringify(collection)],{type : "text/plain"});
+        //collection = formatJSON(collection);         
+        let blob = new Blob([JSON.stringify(collection,null,2)],{type : "text/plain"});
         fileWriter.truncate(blob.size);
         console.log(blob.size);
 		fileWriter.onwriteend = function() {
@@ -31,7 +32,7 @@ function saveAsFile() {
         extensions: ['plain']
     }]; 
 
-chrome.fileSystem.chooseEntry({type: 'saveFile' ,accepts: accepts}, function(writableEntry) {
+    chrome.fileSystem.chooseEntry({type: 'saveFile' ,accepts: accepts}, function(writableEntry) {
         if (!writableEntry) {
             displayText('No file selected.');
         }
@@ -50,6 +51,7 @@ chrome.runtime.onMessageExternal.addListener(function(message,messageSender,send
     console.log(message.list);
     return sendResponse({
         say: 'got'
-      });
+    });
 });
+
 
