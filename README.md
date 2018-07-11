@@ -10,7 +10,7 @@
 - open a new page ```chrome://apps/```, click on the apps with name ```weibo storage```
 - open a new tab and let it be the page where you want to back up you weibo posts from, for example if you want to back up weibo posts for yourself, you need to open your personal page which shows all your posts. 
 - the page should be turned to the next automatically, when it comes to the end. When the page comes to the location where you want to stop, turn the extension off at page ```chrome://extensions``` and click the ```Save as``` button on the chrome app's index page, choose the path you want to store your posts. It is recommended that you use a new file to store the data. To use the existed file, its content may be overrided.
-- Note:after complete your back-up, turn the two extensions off, and turn the ```developer mode``` down.
+- Note:after completing your back-up, turn the two extensions off, and turn the ```developer mode``` down.
 
 ## Other possible ways to get things done
 - Building a chrome app alone can make things done.
