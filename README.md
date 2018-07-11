@@ -24,8 +24,7 @@ I decided to build a chrome app because I happened to think of that. : (
 
 ## Built with
 - [weibo-backup-crx](https://github.com/tiye/weibo-backup-crx)
-- [jsoneditor](https://github.com/josdejong/jsoneditor)
-Thanks a lot for the authors' work. 
+Thanks a lot for the author's work. 
 
 ## REF
 if you want to further develop this extensions, you may refer to [the developer guide of Chrome extensions](https://developer.chrome.com/extensions)
