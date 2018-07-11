@@ -6,8 +6,8 @@ function writeToFile(theFileEntry) {
     	fileWriter.onerror = function(e) {
       		console.log("Write failed: " + e.toString());
         };
-                 
-        //collection = formatJSON(collection);         
+        
+        removeRedundance(collection);
         let blob = new Blob([JSON.stringify(collection,null,2)],{type : "text/plain"});
         fileWriter.truncate(blob.size);
         console.log(blob.size);
